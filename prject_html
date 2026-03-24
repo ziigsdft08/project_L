@@ -2,16 +2,87 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Moja Strona z Nagraniami</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje Portfolio | Nagrania i Teksty</title>
+    <style>
+        /* Prosty i nowoczesny wygląd */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f7f6;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: #2c3e50;
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporcje 16:9 */
+            height: 0;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        .video-container iframe, .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.8em;
+            color: #777;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Witaj na mojej stronie!</h1>
-    <p>To jest krótki opis mojej twórczości.</p>
 
-    <h3>Moje nagranie:</h3>
-    <video width="640" height="360" controls>
-      <source src="film.mp4" type="video/mp4">
-      Twoja przeglądarka nie obsługuje odtwarzacza wideo.
-    </video>
+    <header>
+        <h1>Witaj na mojej stronie</h1>
+        <p>Miejsce, gdzie dzielę się moimi nagraniami i przemyśleniami</p>
+    </header>
+
+    <section id="o-mnie">
+        <h2>O mnie</h2>
+        <p>Cześć! Tutaj możesz napisać kilka zdań o sobie. Czym się zajmujesz? Dlaczego tworzysz te nagrania? To świetne miejsce, żeby przedstawić się odwiedzającym.</p>
+    </section>
+
+    <section id="nagrania">
+        <h2>Moje Nagrania</h2>
+        <p>Poniżej znajdziesz moje najnowsze wideo:</p>
+        
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+            
+            </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Strona stworzona na GitHub Pages</p>
+    </footer>
+
 </body>
 </html>
