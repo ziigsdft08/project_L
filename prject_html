@@ -3,86 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moje Portfolio | Nagrania i Teksty</title>
+    <title>Misiowa Akupunktura</title>
     <style>
-        /* Prosty i nowoczesny wygląd */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            background-color: #f4f1ea;
             color: #333;
-            max-width: 800px;
-            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
             padding: 20px;
-            background-color: #f4f7f6;
-        }
-        header {
             text-align: center;
-            padding: 40px 0;
-            background: #2c3e50;
-            color: white;
-            border-radius: 8px;
+        }
+
+        .container {
+            max-width: 700px;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #8b5e3c;
+            border-bottom: 2px solid #8b5e3c;
+            padding-bottom: 10px;
             margin-bottom: 30px;
         }
-        section {
-            background: white;
-            padding: 25px;
+
+        p {
+            line-height: 1.6;
             margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            font-size: 1.1em;
         }
-        h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-        }
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* Proporcje 16:9 */
-            height: 0;
-            overflow: hidden;
-            margin-top: 20px;
-        }
-        .video-container iframe, .video-container video {
-            position: absolute;
-            top: 0;
-            left: 0;
+
+        table {
             width: 100%;
-            height: 100%;
-            border-radius: 4px;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background-color: #fffaf0;
         }
-        footer {
-            text-align: center;
-            font-size: 0.8em;
-            color: #777;
-            margin-top: 40px;
+
+        th, td {
+            border: 1px solid #d2b48c;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #8b5e3c;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fdf5e6;
+        }
+
+        .hint-box {
+            background-color: #eef2f3;
+            border-left: 5px solid #3498db;
+            padding: 15px;
+            margin-top: 30px;
+            font-style: italic;
+            text-align: left;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #c0392b;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Witaj na mojej stronie</h1>
-        <p>Miejsce, gdzie dzielę się moimi nagraniami i przemyśleniami</p>
-    </header>
-
-    <section id="o-mnie">
-        <h2>O mnie</h2>
-        <p>Cześć! Tutaj możesz napisać kilka zdań o sobie. Czym się zajmujesz? Dlaczego tworzysz te nagrania? To świetne miejsce, żeby przedstawić się odwiedzającym.</p>
-    </section>
-
-    <section id="nagrania">
-        <h2>Moje Nagrania</h2>
-        <p>Poniżej znajdziesz moje najnowsze wideo:</p>
+    <div class="container">
+        <h1>Misiowa akupunktura</h1>
         
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-            
-            </div>
-    </section>
+        <p>
+            W skrytce, którą właśnie otworzyłaś, znajduje się końcówka od pewnego długopisu. 
+            Zbadaj dokładnie kostkę i poszukaj na niej czegoś niestandardowego – jeden z tych kafelków 
+            jest podpisany czarnym markerem, pozostałe są puste.
+        </p>
 
-    <footer>
-        <p>&copy; 2024 Strona stworzona na GitHub Pages</p>
-    </footer>
+        <p>Ustal miejsca wbicia igieł, korzystając z podanej tabeli:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Lp.</th>
+                    <th>Część ciała</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1.</td><td>Lewa noga</td></tr>
+                <tr><td>2.</td><td>Serce</td></tr>
+                <tr><td>3.</td><td>Prawa ręka</td></tr>
+                <tr><td>4.</td><td>Lewe biodro</td></tr>
+                <tr><td>5.</td><td>Prawa noga</td></tr>
+                <tr><td>6.</td><td>Nos</td></tr>
+                <tr><td>7.</td><td>Lewa ręka</td></tr>
+                <tr><td>8.</td><td>Prawe ucho</td></tr>
+                <tr><td>9.</td><td>Prawe biodro</td></tr>
+                <tr><td>10.</td><td>Brzuszek</td></tr>
+            </tbody>
+        </table>
+
+        <p>
+            Z życia misia wiemy tylko tyle, że z samego rana obserwuje bezchmurne niebo, 
+            po czym ogląda, jak wschodzi słońce. Na koniec dnia przykrywa się swoją ulubioną 
+            <span style="color: purple; font-weight: bold;">purpurową kołdrą</span>.
+        </p>
+
+        <p>
+            Aby poprawnie rozmieścić igły, przyjmij perspektywę pasażera statku, który spogląda 
+            z pokładu wyżej (od lewej burty do prawej) na najsłynniejszą scenę z udziałem 
+            <strong>Rose (misia) i Jacka</strong>. Jak rozwiążesz kolejność kolorów, zastanów się, 
+            gdzie można by ich użyć :)
+        </p>
+
+        <div class="hint-box">
+            <strong>Wskazówka:</strong> Miś ma znajomą fokę w cyrku, która lubi występować z czerwoną piłką.
+        </div>
+    </div>
 
 </body>
 </html>
