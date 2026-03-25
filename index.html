@@ -11,15 +11,15 @@
         table { width: 100%; border-collapse: collapse; margin: 25px 0; background-color: #fffaf0; }
         th, td { border: 1px solid #d2b48c; padding: 12px; text-align: left; }
         th { background-color: #8b5e3c; color: white; }
+        tr:nth-child(even) { background-color: #fdf5e6; }
         .hint-box { background-color: #eef2f3; border-left: 5px solid #3498db; padding: 15px; margin: 20px 0; text-align: left; font-style: italic; }
         
-        /* Styl panelu muzycznego */
         .music-section { margin-top: 40px; padding-top: 30px; border-top: 2px dashed #d2b48c; }
         audio { width: 100%; margin: 20px 0; }
         input { padding: 12px; border: 2px solid #d2b48c; border-radius: 5px; width: 60%; font-size: 16px; outline: none; }
         button { padding: 12px 25px; background: #8b5e3c; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; margin-left: 5px; }
         button:hover { background: #6f4a2f; }
-        #gratulacje { display: none; margin-top: 25px; padding: 20px; background-color: #e8f5e9; border: 1px solid #2e7d32; border-radius: 10px; color: #1b5e20; line-height: 1.6; }
+        #gratulacje { display: none; margin-top: 25px; padding: 20px; background-color: #e8f5e9; border: 1px solid #2e7d32; border-radius: 10px; color: #1b5e20; line-height: 1.6; text-align: left; }
     </style>
 </head>
 <body>
@@ -30,24 +30,28 @@
         
         <p>Ustal miejsca wbicia igieł korzystając z podanej tabeli:</p>
         <table>
-            <tr><th>Lp.</th><th>Część ciała</th></tr>
-            <tr><td>1.</td><td>Lewa noga</td></tr>
-            <tr><td>2.</td><td>Serce</td></tr>
-            <tr><td>3.</td><td>Prawa ręka</td></tr>
-            <tr><td>4.</td><td>Lewe biodro</td></tr>
-            <tr><td>5.</td><td>Prawa noga</td></tr>
-            <tr><td>6.</td><td>Nos</td></tr>
-            <tr><td>7.</td><td>Lewa ręka</td></tr>
-            <tr><td>8.</td><td>Prawe ucho</td></tr>
-            <tr><td>9.</td><td>Prawe biodro</td></tr>
-            <tr><td>10.</td><td>Brzuszek</td></tr>
+            <thead>
+                <tr><th>Lp.</th><th>Część ciała</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1.</td><td>Lewa noga</td></tr>
+                <tr><td>2.</td><td>Serce</td></tr>
+                <tr><td>3.</td><td>Prawa ręka</td></tr>
+                <tr><td>4.</td><td>Lewe biodro</td></tr>
+                <tr><td>5.</td><td>Prawa noga</td></tr>
+                <tr><td>6.</td><td>Nos</td></tr>
+                <tr><td>7.</td><td>Lewa ręka</td></tr>
+                <tr><td>8.</td><td>Prawe ucho</td></tr>
+                <tr><td>9.</td><td>Prawe biodro</td></tr>
+                <tr><td>10.</td><td>Brzuszek</td></tr>
+            </tbody>
         </table>
 
-        <p>Z życia misia wiemy tylko tyle, że z samego rana obserwuje bezchmurne niebo, po czym ogląda jak wschodzi słońce. Na koniec dnia przykrywa się swoją ulubioną <b>purpurową kołdrą</b>.</p>
+        <p>Z życia misia wiemy tylko tyle, że z samego rana obserwuje bezchmurne <b>niebo</b>, po czym ogląda jak wschodzi <b>słońce</b>. Na koniec dnia przykrywa się swoją ulubioną purpurową <b>kołdrą</b>.</p>
         <p>Aby poprawnie rozmieścić igły, przyjmij perspektywę pasażera statku, który spogląda z pokładu wyżej od lewej burty do prawej na najsłynniejszą scenę z udziałem Rose (misia) i Jacka. Jak rozwiążesz kolejność kolorów zastanów się, gdzie można by ich użyć :)</p>
 
         <div class="hint-box">
-            <strong>Wskazówka:</strong> Miś ma znajomą fokę w cyrku, która lubi występować z czerwoną piłką.
+            <strong>Wskazówka:</strong> Miś ma znajomą <b>fokę w cyrku</b>, która lubi występować z czerwoną piłką.
         </div>
 
         <div class="music-section">
@@ -75,8 +79,9 @@
 
     <script>
         function sprawdzHaslo() {
+            // Zamieniamy na małe litery i usuwamy spacje
             const userInp = document.getElementById('inputHaslo').value.trim().toLowerCase();
-            // Sprawdzamy czy wpisano rivier (małe litery wystarczą przez .toLowerCase())
+            // Sprawdzamy hasło 'rivier'
             if (userInp === 'rivier') {
                 document.getElementById('gratulacje').style.display = 'block';
                 document.getElementById('gratulacje').scrollIntoView({ behavior: 'smooth' });
