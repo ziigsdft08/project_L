@@ -5,129 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Misiowa Akupunktura</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f1ea;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 700px;
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            color: #8b5e3c;
-            border-bottom: 2px solid #8b5e3c;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-        }
-
-        p {
-            line-height: 1.6;
-            margin-bottom: 20px;
-            font-size: 1.1em;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 25px 0;
-            background-color: #fffaf0;
-        }
-
-        th, td {
-            border: 1px solid #d2b48c;
-            padding: 12px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #8b5e3c;
-            color: white;
-        }
-
-        tr:nth-child(even) {
-            background-color: #fdf5e6;
-        }
-
-        .hint-box {
-            background-color: #eef2f3;
-            border-left: 5px solid #3498db;
-            padding: 15px;
-            margin-top: 30px;
-            font-style: italic;
-            text-align: left;
-        }
-
-        .highlight {
-            font-weight: bold;
-            color: #c0392b;
-        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f1ea; color: #333; display: flex; flex-direction: column; align-items: center; padding: 20px; text-align: center; }
+        .container { max-width: 700px; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        h1, h2 { color: #8b5e3c; }
+        table { width: 100%; border-collapse: collapse; margin: 25px 0; background-color: #fffaf0; }
+        th, td { border: 1px solid #d2b48c; padding: 12px; text-align: left; }
+        th { background-color: #8b5e3c; color: white; }
+        .hint-box { background-color: #eef2f3; border-left: 5px solid #3498db; padding: 15px; margin: 20px 0; text-align: left; font-style: italic; }
+        
+        /* Styl panelu muzycznego */
+        .music-section { margin-top: 40px; padding-top: 30px; border-top: 2px dashed #d2b48c; }
+        audio { width: 100%; margin: 20px 0; }
+        input { padding: 12px; border: 2px solid #d2b48c; border-radius: 5px; width: 60%; font-size: 16px; outline: none; }
+        button { padding: 12px 25px; background: #8b5e3c; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; margin-left: 5px; }
+        button:hover { background: #6f4a2f; }
+        #gratulacje { display: none; margin-top: 25px; padding: 20px; background-color: #e8f5e9; border: 1px solid #2e7d32; border-radius: 10px; color: #1b5e20; line-height: 1.6; }
     </style>
 </head>
 <body>
 
     <div class="container">
         <h1>Misiowa akupunktura</h1>
+        <p>W skrytce, którą właśnie otworzyłaś, znajduje się końcówka od pewnego długopisu. Zbadaj dokładnie kostkę i poszukaj na niej czegoś niestandardowego – jeden z kafelków jest podpisany czarnym markerem, pozostałe są puste.</p>
         
-        <p>
-            W skrytce, którą właśnie otworzyłaś, znajduje się końcówka od pewnego długopisu. 
-            Zbadaj dokładnie kostkę i poszukaj na niej czegoś niestandardowego – jeden z tych kafelków 
-            jest podpisany czarnym markerem, pozostałe są puste.
-        </p>
-
-        <p>Ustal miejsca wbicia igieł, korzystając z podanej tabeli:</p>
-
+        <p>Ustal miejsca wbicia igieł korzystając z podanej tabeli:</p>
         <table>
-            <thead>
-                <tr>
-                    <th>Lp.</th>
-                    <th>Część ciała</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>1.</td><td>Lewa noga</td></tr>
-                <tr><td>2.</td><td>Serce</td></tr>
-                <tr><td>3.</td><td>Prawa ręka</td></tr>
-                <tr><td>4.</td><td>Lewe biodro</td></tr>
-                <tr><td>5.</td><td>Prawa noga</td></tr>
-                <tr><td>6.</td><td>Nos</td></tr>
-                <tr><td>7.</td><td>Lewa ręka</td></tr>
-                <tr><td>8.</td><td>Prawe ucho</td></tr>
-                <tr><td>9.</td><td>Prawe biodro</td></tr>
-                <tr><td>10.</td><td>Brzuszek</td></tr>
-            </tbody>
+            <tr><th>Lp.</th><th>Część ciała</th></tr>
+            <tr><td>1.</td><td>Lewa noga</td></tr>
+            <tr><td>2.</td><td>Serce</td></tr>
+            <tr><td>3.</td><td>Prawa ręka</td></tr>
+            <tr><td>4.</td><td>Lewe biodro</td></tr>
+            <tr><td>5.</td><td>Prawa noga</td></tr>
+            <tr><td>6.</td><td>Nos</td></tr>
+            <tr><td>7.</td><td>Lewa ręka</td></tr>
+            <tr><td>8.</td><td>Prawe ucho</td></tr>
+            <tr><td>9.</td><td>Prawe biodro</td></tr>
+            <tr><td>10.</td><td>Brzuszek</td></tr>
         </table>
 
-        <p>
-            Z życia misia wiemy tylko tyle, że z samego rana obserwuje bezchmurne niebo, 
-            po czym ogląda, jak wschodzi słońce. Na koniec dnia przykrywa się swoją ulubioną 
-            <span style="color: purple; font-weight: bold;">purpurową kołdrą</span>.
-        </p>
-
-        <p>
-            Aby poprawnie rozmieścić igły, przyjmij perspektywę pasażera statku, który spogląda 
-            z pokładu wyżej (od lewej burty do prawej) na najsłynniejszą scenę z udziałem 
-            <strong>Rose (misia) i Jacka</strong>. Jak rozwiążesz kolejność kolorów, zastanów się, 
-            gdzie można by ich użyć :)
-        </p>
+        <p>Z życia misia wiemy tylko tyle, że z samego rana obserwuje bezchmurne niebo, po czym ogląda jak wschodzi słońce. Na koniec dnia przykrywa się swoją ulubioną <b>purpurową kołdrą</b>.</p>
+        <p>Aby poprawnie rozmieścić igły, przyjmij perspektywę pasażera statku, który spogląda z pokładu wyżej od lewej burty do prawej na najsłynniejszą scenę z udziałem Rose (misia) i Jacka. Jak rozwiążesz kolejność kolorów zastanów się, gdzie można by ich użyć :)</p>
 
         <div class="hint-box">
             <strong>Wskazówka:</strong> Miś ma znajomą fokę w cyrku, która lubi występować z czerwoną piłką.
         </div>
+
+        <div class="music-section">
+            <h2>Zagadka Muzyczna</h2>
+            <p>Hasłem jest imię dziewczyny w poniższym, znanym utworze:</p>
+            
+            <audio controls>
+                <source src="Recording_4.m4a" type="audio/mp4">
+                <source src="Recording_4.mp3" type="audio/mpeg">
+                Twoja przeglądarka nie obsługuje odtwarzacza audio.
+            </audio>
+
+            <div>
+                <input type="text" id="inputHaslo" placeholder="Wpisz imię dziewczyny...">
+                <button onclick="sprawdzHaslo()">Sprawdź</button>
+            </div>
+
+            <div id="gratulacje">
+                Świetnie! Tak bardzo lubiłem ten utwór, że aż sam się nauczyłem go grać, 
+                może nie jest idealnie, ale grając go bawię się doskonale. <br><br>
+                <strong>Co do wskazówki:</strong> oznaczony kafelek żółto-pomarańczowy ma wewnątrz przedmiot.
+            </div>
+        </div>
     </div>
+
+    <script>
+        function sprawdzHaslo() {
+            const userInp = document.getElementById('inputHaslo').value.trim().toLowerCase();
+            // Sprawdzamy czy wpisano rivier (małe litery wystarczą przez .toLowerCase())
+            if (userInp === 'rivier') {
+                document.getElementById('gratulacje').style.display = 'block';
+                document.getElementById('gratulacje').scrollIntoView({ behavior: 'smooth' });
+            } else {
+                alert("To nie to imię... Spróbuj jeszcze raz!");
+            }
+        }
+    </script>
 
 </body>
 </html>
