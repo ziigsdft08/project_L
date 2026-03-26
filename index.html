@@ -56,7 +56,7 @@
 
         <div class="music-section">
             <h2>Zagadka Muzyczna</h2>
-            <p>Hasłem jest imię dziewczyny w poniższym, znanym utworze:</p>
+            <p>Hasłem jest imię dziewczyny, nawiązujące do słowa w tytule poniższego utworu:</p>
             
             <audio controls>
                 <source src="Recording_4.m4a" type="audio/mp4">
@@ -81,8 +81,8 @@
         function sprawdzHaslo() {
             // Zamieniamy na małe litery i usuwamy spacje
             const userInp = document.getElementById('inputHaslo').value.trim().toLowerCase();
-            // Sprawdzamy hasło 'rivier'
-            if (userInp === 'rivier') {
+            // Sprawdzamy hasło 'river'
+            if (userInp === 'river') {
                 document.getElementById('gratulacje').style.display = 'block';
                 document.getElementById('gratulacje').scrollIntoView({ behavior: 'smooth' });
             } else {
